@@ -14,5 +14,8 @@
 
 
 
-## MAQUETACION
-1.Maqutacion de vista de autenticación (login y register). Tomando en cuenta los diseños y la reutilizacion de estilos 
+## PROCESO
+1. Maquetacion de vista de autenticación (login y register). Tomando en cuenta los diseños y la reutilizacion de estilos 
+2. Configuracion de store de redux
+3. Autenticacion con google usando firebase
+
