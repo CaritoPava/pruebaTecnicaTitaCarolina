@@ -15,4 +15,8 @@
 
 
 ## MAQUETACION
-1.Maqutacion de vista de autenticación (login y register). Tomando en cuenta los diseños y la reutilizacion de estilos 
+1.Maquetacion de vista de autenticación (login y register). Tomando en cuenta los diseños y la reutilizacion de estilos 
+2. Verificación de responsive del login
+
+## REDUX
+1. Creacion de store, types y reducers
