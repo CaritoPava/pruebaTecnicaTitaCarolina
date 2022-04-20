@@ -18,4 +18,6 @@
 1. Maquetacion de vista de autenticación (login y register). Tomando en cuenta los diseños y la reutilizacion de estilos 
 2. Configuracion de store de redux
 3. Autenticacion con google usando firebase
+4. Registro de usuario y validacion de formulario
+5. Creacion de reducer para validación de formulario
 
