@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom'
 import validator from 'validator'
 import { useForm } from '../../hooks/useForm'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { setError } from '../../actions/ui'
+import { startRegisterEmailPassword } from '../../actions/auth'
 
 export const RegisterView = () => {
 
   const dispatch = useDispatch()
+  const { msgError } = useSelector(state => state.ui)
 
   const [formValues, handleInputChange] = useForm({
     name: 'Carolina',
@@ -20,7 +22,7 @@ export const RegisterView = () => {
   const handleRegister = (e) => {
     e.preventDefault()
     if (isFormValid()) {
-      console.log('Formulario correcto')
+      dispatch(startRegisterEmailPassword(email, password, name, lastname))
     }
   }
   const isFormValid = () => {
@@ -45,9 +47,9 @@ export const RegisterView = () => {
           className='auth__title-register'
         >Registro
         </h1>
-        <h2>FORMULARIO INVALIDO</h2>
         <form onSubmit={handleRegister}>
           <div className='auth__form'>
+            {msgError && <div className='auth__alert-error'>{msgError}</div>}
             <input
               type="text"
               placeholder='Nombre'
@@ -95,20 +97,7 @@ export const RegisterView = () => {
             >
               <p>Tengo una cuenta</p>
             </Link>
-            <p>O iniciar sesión con</p>
-            <div className='auth__form'>
 
-              <div
-                className='auth__redes'>
-                <button
-                  className='btn-primary btn-mini btn-google'
-                >
-                  <i className="fa-brands fa-google-plus-g mr-5"></i>
-                  Google
-                </button>
-
-              </div>
-            </div>
           </div>
         </form>
         <p>Carolina Pava - 2022</p>
