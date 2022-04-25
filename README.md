@@ -20,4 +20,6 @@
 3. Autenticacion con google usando firebase
 4. Registro de usuario y validacion de formulario
 5. Creacion de reducer para validación de formulario
+6. Login con usuario y contraseña
+7. Proteccion de rutas (rutas privadas y publicas)
 

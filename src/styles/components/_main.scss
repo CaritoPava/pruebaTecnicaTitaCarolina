@@ -1,0 +1,133 @@
+.main__conte {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  margin: 0;
+}
+
+.main__conte-post {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+  margin: 0;
+}
+
+.main__cont-cardPost {
+  width: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  font-size: 1.2rem;
+
+  p {
+    text-align: left;
+  }
+
+  img {
+    width: 20%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.main__cont-cardPost-picture {
+  display: flex;
+  align-items: center;
+
+
+  img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 5rem;
+  }
+}
+
+.main__cont-cardPost-user {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+  height: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 2rem;
+
+}
+
+.main__cont-cardPost-userName {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  p {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+.main__cont-cardPost-ConteTags {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.main__cont-cardPost-tags {
+  list-style: none;
+  background-color: $greenPrimary;
+  padding: 0.5rem;
+  margin: 20px 5px;
+  border-radius: 10px;
+}
+
+.main__cont-cardPost-imgLikes {
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+
+.main__cont-cardPost-img {
+  width: 90%;
+  height: 80%;
+  align-self: center;
+
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}
+
+.main__cont-cardPost-likes {
+  background-color: rgba(0, 0, 0, 0.538);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 450px;
+  align-items: center;
+  margin-top: -4rem;
+  position: absolute;
+  z-index: 1;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  color: white;
+
+
+  i {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: red;
+  }
+
+}
