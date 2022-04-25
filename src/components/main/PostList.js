@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react'
 
 export const PostList = () => {
   const [datosPost, setDatosPost] = useState([])
-  const [datosComment, setDatosComment] = useState([])
+  const [datoId, setDatoId] = useState([])
+  const [datosComments, setDatosComments] = useState([])
   useEffect(() => {
     getPost()
   }, [])
@@ -21,6 +22,21 @@ export const PostList = () => {
     } catch (error) {
       console.log(error)
     }
+
+
+
+    // try {
+    //   const url = `https://dummyapi.io/data/v1/comment?postId=${id}`
+    //   const resp = await fetch(url, {
+    //     headers: {
+    //       'app-id': '625e300400b071439e88fc3d'
+    //     }
+    //   })
+    //   const { data } = await resp.json()
+    //   setDatosComment(data)
+    // } catch (error) {
+    //   console.log(error)
+    // }
 
 
 
@@ -47,7 +63,30 @@ export const PostList = () => {
     // setDatosPost(filterData)
   }
 
-  const idPost = datosPost.map(({ id }) => id)
+  const viewCommenst = (id) => {
+    setDatoId(id)
+    const getCommentes = async () => {
+      try {
+        const url = `https://dummyapi.io/data/v1/post/${id}/comment`
+        const resp = await fetch(url, {
+          headers: {
+            'app-id': '6266c9acf52f740d79e36115'
+          }
+        })
+        const { data } = await resp.json()
+        console.log(data)
+        setDatosComments(data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    getCommentes()
+  }
+
+  console.log(datosComments, "estos son los datos de los comentarios")
+
+
+
 
   // console.log(idPost, "id")
 
@@ -82,7 +121,7 @@ export const PostList = () => {
 
 
 
-  console.log(datosPost, 'datos')
+
   // console.log(datosComment, 'comments')
 
 
@@ -110,7 +149,7 @@ export const PostList = () => {
               </div>
               <p className='main__cont-cardPost-text'>{element.text}</p>
               <div className='main__cont-cardPost-ConteTags'>{element.tags.map((tag, id) => <ul><li className="main__cont-cardPost-tags" key={id}>{tag}</li></ul>)}</div>
-              <div className='main__cont-cardPost-imgLikes'>
+              <div className='main__cont-cardPost-imgLikes' onClick={() => viewCommenst(element.id)}>
                 <div className='main__cont-cardPost-img'> <img src={element.image} alt="" />
                 </div>
                 <div className='main__cont-cardPost-likes'>
