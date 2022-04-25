@@ -36,26 +36,6 @@ export const AppRouter = () => {
     return (<h1>Cargando, por favor espere..</h1>)
   }
 
-  //   return (
-  //     <BrowserRouter>
-  //       <Routes>
-  //         <Route path='/auth/*' isAuthenticated={isLoggedIn} element={
-  //           <PublicRoute>
-  //             <AuthRouter />
-  //           </PublicRoute>
-  //         } />
-
-  //         <Route path='/*' isAuthenticated={isLoggedIn} element={
-  //           <PrivateRoute>
-  //             <MainRouter />
-  //           </PrivateRoute>
-  //         } />
-  //       </Routes>
-  //     </BrowserRouter>
-
-  //   )
-  // }
-
   return (
     <Router>
       <div>
