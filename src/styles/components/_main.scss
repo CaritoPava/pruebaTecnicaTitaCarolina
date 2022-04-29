@@ -1,6 +1,6 @@
 .main__conte {
   display: flex;
-  align-items: center;
+  background-color: rgb(236, 236, 236);
   justify-content: space-between;
   width: 100%;
   height: 100%;
@@ -15,6 +15,7 @@
   width: 70%;
   height: 100%;
   margin: 0;
+  padding-top: 4rem;
 }
 
 .main__cont-cardPost {
@@ -60,7 +61,7 @@
   font-size: 2rem;
   font-weight: bold;
   padding-bottom: 2rem;
-
+  cursor: pointer;
 }
 
 .main__cont-cardPost-userName {
@@ -131,4 +132,40 @@
     color: red;
   }
 
+}
+
+.main__conte-tags {
+  width: 30%;
+  padding-top: 6rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 2rem;
+    padding-left: 3rem;
+  }
+
+
+  li {
+    background-color: $bluePrimary;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    transition: 0s;
+
+    &:hover {
+      background-color: $greenPrimary;
+    }
+  }
+}
+
+.main__conte-listTags {
+  width: auto;
 }
