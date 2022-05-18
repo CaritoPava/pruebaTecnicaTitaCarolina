@@ -1,0 +1,92 @@
+li {
+  list-style: none;
+}
+
+
+
+.modal__comments {
+  width: 315px;
+  align-items: center;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-size: 1rem;
+  // margin-right: 25px;
+  margin-top: 0;
+  margin-left: -60px;
+  margin-bottom: -15px;
+}
+
+.modal__conte-commets {
+  padding: 20px;
+  align-items: center;
+}
+
+.modal__invisible {
+  display: none;
+}
+
+.modal__comments-title {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 10px 0px;
+  color: $blueSecondary;
+  text-decoration: underline;
+  text-align: right;
+  cursor: pointer;
+
+  &:hover {
+    color: $bluePrimary;
+    font-size: 1rem;
+  }
+}
+
+
+.modal__info-User {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.754);
+  padding: 70px 5px;
+  margin-top: 20px;
+
+}
+
+.modal__info-UserImg {
+  padding: 50px;
+  text-align: center;
+
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px;
+    border-color: gray;
+
+  }
+}
+
+.modal__info-User-Name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+
+  p {
+    padding-left: 10px;
+  }
+}
+
+.modal__info-User-Data {
+  font-size: 1.2rem;
+  padding: 20px;
+  margin: 20px;
+
+  p {
+    padding: 5px;
+  }
+
+}
