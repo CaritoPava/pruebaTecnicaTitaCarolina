@@ -1,22 +1,21 @@
 import React, { Children, useEffect, useState } from 'react'
-import { getPost } from '../../helpers/getPost'
 import { BasicModal } from '../modal/BasicModal'
 import { CommentsById } from '../modal/CommentsById'
 import { InfoUser } from './InfoUser'
 
 
-export const PostList = () => {
-  const [datosPost, setDatosPost] = useState([])
+export const PostList = ({ datosPost }) => {
+
   const [isModalVisible, setIsModalVisible] = useState(false)
   const [idUser, setIdUser] = useState('')
 
 
-  useEffect(() => {
-    getPost()
-      .then(data => {
-        setDatosPost(data)
-      })
-  }, [])
+  // useEffect(() => {
+  //   getPost()
+  //     .then(data => {
+  //       setDatosPost(data)
+  //     })
+  // }, [])
   // const getPost = async () => {
   //   try {
   //     const url = `https://dummyapi.io/data/v1/post?limit=50`
@@ -126,22 +125,15 @@ export const PostList = () => {
   //   })
   // }
 
-
-
-
-  // console.log(datosComment, 'comments')
   const getIdUser = (idUser) => {
     setIdUser(idUser)
 
   }
-  console.log(idUser, 'idUser')
-
-
 
   const handleDisplayModal = () => {
     setIsModalVisible(prevState => !prevState)
   }
-  console.log(datosPost, "estos son los datos de los post")
+
 
   return (
     <>
@@ -149,8 +141,8 @@ export const PostList = () => {
 
         <h1>{datosPost.length === 0 ? <p>Loading...</p> : datosPost.map((element) =>
           <ul>
-            <li key={element.id} className="main__cont-cardPost" onClick={handleDisplayModal}>
-              <div className='main__cont-cardPost-user' onClick={() => getIdUser(element.owner.id)} >
+            <li key={element.id} className="main__cont-cardPost" onClick={() => getIdUser(element.owner.id)}>
+              <div className='main__cont-cardPost-user' onClick={handleDisplayModal}>
                 <div className='main__cont-cardPost-picture' >
                   <img src={element.owner.picture} alt="" />
                 </div>
@@ -166,7 +158,16 @@ export const PostList = () => {
 
               </div>
               <p className='main__cont-cardPost-text'>{element.text}</p>
-              <div className='main__cont-cardPost-ConteTags'>{element.tags.map((tag, id) => <ul><li className="main__cont-cardPost-tags" key={id}>{tag}</li></ul>)}</div>
+              <div className='main__cont-cardPost-ConteTags'>{element.tags.map((tag, id) =>
+                <ul>
+                  <li
+                    className="main__cont-cardPost-tags"
+                    key={id}
+                  >
+                    {tag}
+                  </li>
+                </ul>
+              )}</div>
               <div className='main__cont-cardPost-imgLikes' >
                 <div className='main__cont-cardPost-img'> <img src={element.image} alt="" />
                 </div>
@@ -191,7 +192,6 @@ export const PostList = () => {
             < InfoUser idUser={idUser} />
           </BasicModal>
         )}
-
 
       </div>
 

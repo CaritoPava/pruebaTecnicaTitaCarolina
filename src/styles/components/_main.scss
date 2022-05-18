@@ -169,3 +169,8 @@
 .main__conte-listTags {
   width: auto;
 }
+
+.main__conte-listTags-inactive {
+  background-color: $greenPrimary;
+  border: 3px solid $greenPrimary;
+}

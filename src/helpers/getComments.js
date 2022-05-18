@@ -17,5 +17,6 @@ export const getComments = async (id) => {
     console.log(error)
   }
   return datosComment
+
 }
 

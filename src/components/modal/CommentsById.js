@@ -12,7 +12,7 @@ export const CommentsById = ({ id }) => {
       .then(data => {
         setDatosComments(data)
       })
-  }, [])
+  }, [id, setIsModalVisible])
   // console.log(datosComments, "este es el datosComments")
 
   const handleDisplayModal = () => {
