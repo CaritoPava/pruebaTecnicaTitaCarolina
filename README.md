@@ -32,4 +32,9 @@ los tags de la Api presentan mucha infomracion no relavante y tags que no poseen
 14. Coneccion de barra de tags para recarga de post
 15. Todas las conecciona a la Api se hacen en fomra simultania a la construccion de componentes
 16. Visualizacion de informacion de usuario en el Header 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 8ee3ec270023c5e348d0dd791ea1b681e45c6115
 
