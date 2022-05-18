@@ -14,6 +14,7 @@
 
 
 
+<<<<<<< HEAD
 ## PROCESO
 1. Maquetacion de vista de autenticación (login y register). Tomando en cuenta los diseños y la reutilizacion de estilos 
 2. Configuracion de store de redux
@@ -37,4 +38,6 @@ los tags de la Api presentan mucha infomracion no relavante y tags que no poseen
 
 
 >>>>>>> 8ee3ec270023c5e348d0dd791ea1b681e45c6115
+=======
+>>>>>>> 80cd0461d4d9338a867ef410621467115f79975d
 
