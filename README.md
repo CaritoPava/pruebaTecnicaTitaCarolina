@@ -9,7 +9,21 @@
 5. Configuación de las rutas básicas 
                     
 ## DISEÑO
+<<<<<<< HEAD
 1. Los diseños a tomar en cuenta son los siguientes:
+=======
+1. Los diseños a tomar en cuenta son los siguientes
+
+## PROCESO
+1. Maquetacion de vista de autenticación (login y register). Tomando en cuenta los diseños y la reutilizacion de estilos 
+2. Configuracion de store de redux
+3. Autenticacion con google usando firebase
+4. Registro de usuario y validacion de formulario
+5. Creacion de reducer para validación de formulario
+6. Login con usuario y contraseña
+7. Proteccion de rutas (rutas privadas y publicas)
+
+>>>>>>> 0d6704c8db72ec942b87544ca9885777e90b6f0a
 
 
 ## PROCESO
