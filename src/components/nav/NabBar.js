@@ -1,21 +1,31 @@
 
-import { useSelector } from "react-redux"
-import { login } from "../../actions/auth"
+import { useDispatch, useSelector } from "react-redux"
+import { login, startLogout } from "../../actions/auth"
 
 
 export const NabBar = () => {
+
+  const dispatch = useDispatch()
+
   const user = useSelector(state => state.auth.name)
   const { payload } = login()
   console.log(payload)
+
+  const handleLogout = () => {
+    dispatch(startLogout())
+  }
 
   return (
     <div className="nav__navBar">
       <h2>TITAGRAM</h2>
       <div className="nav__navBar-user">
         <h2>{user}</h2>
-        {/* <button className='btn '>
+        <button
+          className='btn '
+          onClick={handleLogout}
+        >
           Logout
-        </button> */}
+        </button>
 
       </div>
     </div>
