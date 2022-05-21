@@ -6,6 +6,13 @@
   height: 100%;
   padding: 3rem;
   margin: 0;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    padding-top: 0;
+    padding-left: 0;
+    flex-direction: column;
+  }
 }
 
 .main__conte-post {
@@ -164,7 +171,14 @@
       background-color: $greenPrimary;
     }
   }
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    flex-direction: row;
+  }
+
 }
+
 
 .main__conte-listTags {
   width: auto;
