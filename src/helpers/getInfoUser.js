@@ -9,10 +9,7 @@ export const getInfoUser = async (idUser) => {
       }
     })
     const data = await resp.json()
-
     datosUser = data
-    console.log(datosUser, "DATOS USER")
-
   } catch (error) {
     console.log(error)
   }

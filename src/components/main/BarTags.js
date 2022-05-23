@@ -20,7 +20,6 @@ export const BarTags = ({ handleTag }) => {
       })
       const { data } = await resp.json()
       const tagsWithInfo = data.filter(tag => tag.length > 2 && tag.length < 20)
-      console.log(tagsWithInfo)
       setTags(tagsWithInfo.slice(2, 50))
     } catch (error) {
       console.log(error)

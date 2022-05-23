@@ -9,10 +9,7 @@ export const getComments = async (id) => {
       }
     })
     const { data } = await resp.json()
-
     datosComment = data
-    // console.log(resp, "comentarios")
-    console.log(datosComment, "comentarios")
   } catch (error) {
     console.log(error)
   }

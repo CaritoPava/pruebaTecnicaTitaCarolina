@@ -9,8 +9,6 @@ export const InfoUser = ({ idUser }) => {
         setDatosUser(data)
       })
   }, [])
-  console.log(datosUser, "este es el datosUser")
-
 
   return (
     <>

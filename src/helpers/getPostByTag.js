@@ -8,10 +8,8 @@ const getPostByTag = async (tags) => {
         'app-id': '62676448c7b353234cb37a15'
       }
     })
-    console.log(resp)
     const { data } = await resp.json()
     postData = data
-    console.log(postData, "datos segun tag")
   } catch (error) {
     console.log(error)
   }

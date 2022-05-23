@@ -13,7 +13,6 @@ export const MainView = () => {
   const handleTag = (tag) => {
     setTags(tag)
   }
-  console.log(tags)
 
   useEffect(() => {
     if (tags.length > 0) {
