@@ -2,16 +2,16 @@
   display: flex;
   background-color: rgb(236, 236, 236);
   justify-content: space-between;
-  width: 100%;
+  width: 95%;
   height: 100%;
   padding: 3rem;
   margin: 0;
 
   @media screen and (max-width: 600px) {
-    width: 100%;
     padding-top: 0;
     padding-left: 0;
     flex-direction: column;
+
   }
 }
 
@@ -19,10 +19,11 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
   height: 100%;
   margin: 0;
   padding-top: 4rem;
+
 }
 
 .main__cont-cardPost {
@@ -46,6 +47,13 @@
     height: auto;
     object-fit: cover;
   }
+
+  @media screen and (max-width: 600px) {
+    width: 320px;
+    font-size: 1rem;
+    margin-left: 2rem;
+
+  }
 }
 
 .main__cont-cardPost-picture {
@@ -57,6 +65,7 @@
     border-radius: 50%;
     object-fit: cover;
     width: 5rem;
+    align-items: center;
   }
 }
 
@@ -69,6 +78,10 @@
   font-weight: bold;
   padding-bottom: 2rem;
   cursor: pointer;
+
+  @media screen and (max-width: 600px) {
+    padding-left: 20px;
+  }
 }
 
 .main__cont-cardPost-userName {
@@ -80,11 +93,16 @@
     padding-left: 1rem;
     font-size: 1.5rem;
   }
+
+  @media screen and (max-width: 600px) {
+    padding-left: 20px;
+  }
 }
 
 .main__cont-cardPost-ConteTags {
   display: flex;
   justify-content: flex-start;
+
 }
 
 .main__cont-cardPost-tags {
@@ -101,6 +119,10 @@
   height: 100%;
   margin: 0;
   cursor: pointer;
+
+  @media screen and (max-width: 600px) {
+    padding-left: 20px;
+  }
 }
 
 
@@ -115,6 +137,12 @@
     height: auto;
     object-fit: cover;
     border-radius: 5px;
+  }
+}
+
+.main__cont-cardPost-text {
+  @media screen and (max-width: 600px) {
+    padding-left: 20px;
   }
 }
 
@@ -137,6 +165,10 @@
     padding-left: 1rem;
     padding-right: 1rem;
     color: red;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 285px;
   }
 
 }
@@ -174,7 +206,7 @@
 
   @media screen and (max-width: 600px) {
     width: 100%;
-    flex-direction: row;
+    display: flex;
   }
 
 }
@@ -182,6 +214,12 @@
 
 .main__conte-listTags {
   width: auto;
+
+  @media screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8rem;
+  }
 }
 
 .main__conte-listTags-inactive {

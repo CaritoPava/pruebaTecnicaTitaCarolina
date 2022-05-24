@@ -1,6 +1,6 @@
 
 import { useDispatch, useSelector } from "react-redux"
-import { login, startLogout } from "../../actions/auth"
+import { startLogout } from "../../actions/auth"
 
 
 export const NabBar = () => {
@@ -8,8 +8,6 @@ export const NabBar = () => {
   const dispatch = useDispatch()
 
   const user = useSelector(state => state.auth.name)
-  const { payload } = login()
-  console.log(payload)
 
   const handleLogout = () => {
     dispatch(startLogout())
