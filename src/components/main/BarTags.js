@@ -32,7 +32,7 @@ export const BarTags = ({ handleTag }) => {
 
     <div className='main__conte-tags'>
       <h1>Tags</h1>
-      <ul>
+      <ul className='main__conte-tags-ul'>
         {tags.map((tag, id) =>
           <li
             className="main__conte-listTags"

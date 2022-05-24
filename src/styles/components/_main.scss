@@ -1,4 +1,5 @@
 .main__conte {
+
   display: flex;
   background-color: rgb(236, 236, 236);
   justify-content: space-between;
@@ -38,6 +39,7 @@
   padding: 2rem;
   font-size: 1.2rem;
 
+
   p {
     text-align: left;
   }
@@ -51,8 +53,6 @@
   @media screen and (max-width: 600px) {
     width: 320px;
     font-size: 1rem;
-    margin-left: 2rem;
-
   }
 }
 
@@ -101,8 +101,14 @@
 
 .main__cont-cardPost-ConteTags {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
+  padding-right: 3rem;
 
+  @media screen and (max-width: 600px) {
+    ul {
+      padding-right: 0rem;
+    }
+  }
 }
 
 .main__cont-cardPost-tags {
@@ -127,17 +133,24 @@
 
 
 .main__cont-cardPost-img {
-  width: 90%;
+  width: 100%;
   height: 80%;
-  align-self: center;
 
+  img {
+    object-fit: cover;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+  }
 
   img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 5px;
   }
+
+  @media screen and (max-width: 600px) {
+    width: 90%;
+  }
+
 }
 
 .main__cont-cardPost-text {
@@ -149,12 +162,11 @@
 .main__cont-cardPost-likes {
   background-color: rgba(0, 0, 0, 0.538);
   padding-top: 1rem;
-  padding-bottom: 1rem;
-  width: 450px;
+  padding-bottom: 1.2rem;
+  width: 499px;
   align-items: center;
   margin-top: -4rem;
-  position: absolute;
-  z-index: 1;
+  position: relative;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   color: white;
@@ -168,7 +180,7 @@
   }
 
   @media screen and (max-width: 600px) {
-    width: 285px;
+    width: 288px;
   }
 
 }
@@ -202,11 +214,21 @@
     &:hover {
       background-color: $greenPrimary;
     }
+
   }
 
   @media screen and (max-width: 600px) {
     width: 100%;
     display: flex;
+  }
+
+}
+
+.main__conte-tags-ul {
+
+  @media screen and (max-width: 600px) {
+    height: 150px;
+    overflow-y: scroll;
   }
 
 }
